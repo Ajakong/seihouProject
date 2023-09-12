@@ -43,8 +43,10 @@ namespace Pad
 
 	bool IsRepeat(int key, int& frame, int RepeatFrame)
 	{
+		// ‰Ÿ‚µ‚½‰ñ‚Å‚ ‚ê‚Îtrue
 		if (IsTrigger(key)) return true;
 
+		// ‰Ÿ‚³‚ê‘±‚¯‚Ä‚¢‚éê‡ƒŠƒs[ƒgˆ—
 		if (IsPress(key))
 		{
 			frame++;
