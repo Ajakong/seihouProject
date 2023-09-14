@@ -20,8 +20,8 @@ private:
 	int m_graphSizeY;
 
 	// ˆÊ’u
-	int m_x;
-	int m_y;
+	int m_posX;
+	int m_posY;
 
 	// ˆÚ“®î•ñ
 	int m_speedX;
