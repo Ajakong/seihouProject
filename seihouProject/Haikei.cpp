@@ -1,4 +1,5 @@
 #include "Haikei.h"
+#include "Game.h"
 
 Haikei::Haikei()
 {
