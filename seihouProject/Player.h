@@ -1,4 +1,6 @@
 #pragma once
+#include"Vec2.h"
+
 
 class Player
 {
@@ -11,13 +13,17 @@ public:
 	void Update();
 	void Draw();
 
+	float getradius();
+
 	void SetHandle(int handle);
 
 private:
 	int m_handle;    //グラフィックのハンドル
+private:
+	int m_pHp;
+	int m_bombNum;
 
+	Vec2 m_pos;
 
-
-	float m_posX;
-	float m_posY;
+	int m_radius;
 };
