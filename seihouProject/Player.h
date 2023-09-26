@@ -13,6 +13,10 @@ public:
 	void Update();
 	void Draw();
 
+	float GetPosX();
+
+	float GetPosY();
+
 	float getradius();
 
 	void SetHandle(int handle);

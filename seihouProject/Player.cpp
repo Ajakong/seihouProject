@@ -36,9 +36,9 @@ void Player::Update()
 	if (CheckHitKey(KEY_INPUT_D) == 1) m_pos.x += 3;
 	if (CheckHitKey(KEY_INPUT_A) == 1) m_pos.x -= 3;
 
-	if (m_pos.x > Game::kScreenWidth / 2-25)
+	if (m_pos.x > Game::kScreenWidth / 2-30)
 	{
-		m_pos.x = Game::kScreenWidth / 2-25;
+		m_pos.x = Game::kScreenWidth / 2-30;
 	}
 	if (m_pos.x < 0)
 	{
@@ -48,9 +48,9 @@ void Player::Update()
 	{
 		m_pos.y = (Game::kScreenHeight / 4);
 	}
-	if (m_pos.y > Game::kScreenHeight-25)
+	if (m_pos.y > Game::kScreenHeight-30)
 	{
-		m_pos.y = Game::kScreenHeight - 25;
+		m_pos.y = Game::kScreenHeight - 30;
 	}
 	if (CheckHitKey(KEY_INPUT_SPACE) == 1&&m_bombNum!=0)
 	{
@@ -64,8 +64,22 @@ void Player::Update()
 
 void Player::Draw()
 {
-	DrawBox(m_pos.x, m_pos.y, m_pos.x + 25, m_pos.y + 25, GetColor(255, 255, 255),true);
+	DrawBox(m_pos.x, m_pos.y, m_pos.x + 30, m_pos.y + 30, GetColor(255, 255, 255),true);
 }
+
+float Player::GetPosX()
+{
+	return m_pos.x+15;
+}
+
+float Player::GetPosY()
+{
+	return m_pos.y+15;
+}
+
+
+
+
 
 float Player::getradius()
 {
