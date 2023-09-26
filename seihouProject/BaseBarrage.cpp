@@ -97,7 +97,7 @@ bool BaseBarrage::Collision(Player player) const
 {
 	/*Vec2 dis{ m_pos.x - player.GetPosX(), m_pos.y - player.GetPosY() };
 
-	return (((m_radius + player.GetRadius()) * (m_radius + player.GetRadius()) < dis.SqLength());*/
+	if((m_radius + player.GetRadius()) * (m_radius + player.GetRadius()) < dis.SqLength())*/
 	return false;
 }
 
