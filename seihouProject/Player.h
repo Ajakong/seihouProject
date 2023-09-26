@@ -11,6 +11,8 @@ public:
 	void Update();
 	void Draw();
 
+	void SetHandle(int handle);
+
 private:
 	int m_handle;    //グラフィックのハンドル
 

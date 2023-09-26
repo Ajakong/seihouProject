@@ -140,6 +140,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BaseBarrage.cpp" />
+    <ClCompile Include="EnemyItem.cpp" />
+    <ClCompile Include="EnemyMove.cpp" />
+    <ClCompile Include="Haikei.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pad.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -148,7 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseBarrage.h" />
+    <ClInclude Include="EnemyItem.h" />
+    <ClInclude Include="EnemyMove.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Haikei.h" />
     <ClInclude Include="Pad.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="SceneMain.h" />

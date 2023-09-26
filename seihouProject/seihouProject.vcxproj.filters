@@ -13,18 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\GameMain">
+      <UniqueIdentifier>{018cdf6b-0fa4-44b9-8092-8bd7733f3bf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\GameMain">
+      <UniqueIdentifier>{e0a940a8-e673-47b0-ba79-66fabd82e958}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="BaseBarrage.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Pad.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="SceneManager.cpp">
@@ -33,15 +33,24 @@
     <ClCompile Include="SceneMain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="BaseBarrage.cpp">
+      <Filter>ソース ファイル\GameMain</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyMove.cpp">
+      <Filter>ソース ファイル\GameMain</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>ソース ファイル\GameMain</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyItem.cpp">
+      <Filter>ソース ファイル\GameMain</Filter>
+    </ClCompile>
+    <ClCompile Include="Haikei.cpp">
+      <Filter>ソース ファイル\GameMain</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BaseBarrage.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Pad.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
@@ -52,6 +61,21 @@
     </ClInclude>
     <ClInclude Include="SceneMain.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseBarrage.h">
+      <Filter>ヘッダー ファイル\GameMain</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyMove.h">
+      <Filter>ヘッダー ファイル\GameMain</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>ヘッダー ファイル\GameMain</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyItem.h">
+      <Filter>ヘッダー ファイル\GameMain</Filter>
+    </ClInclude>
+    <ClInclude Include="Haikei.h">
+      <Filter>ヘッダー ファイル\GameMain</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

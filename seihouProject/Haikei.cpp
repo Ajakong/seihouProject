@@ -23,3 +23,7 @@ void Haikei::Update()
 void Haikei::Draw()
 {
 }
+
+void Haikei::SetHandle(int handle)
+{
+}

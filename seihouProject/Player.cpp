@@ -39,3 +39,7 @@ void Player::Draw()
 {
 	DrawCircle(m_posX, m_posY, m_posX + 5, m_posY + 5, GetColor(255, 255, 255));
 }
+
+void Player::SetHandle(int handle)
+{
+}

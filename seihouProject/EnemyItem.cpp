@@ -23,3 +23,7 @@ void EnemyItem::Update()
 void EnemyItem::Draw()
 {
 }
+
+void EnemyItem::SetHandle(int handle)
+{
+}
