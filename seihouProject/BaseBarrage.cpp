@@ -46,6 +46,7 @@ void BaseBarrage::Draw() const
 void BaseBarrage::SetHandle(int handle)
 {
 	m_handle = handle;
+
 	assert(m_handle != -1);
 
 	GetGraphSize(m_handle, &m_graphSizeX, &m_graphSizeY);
