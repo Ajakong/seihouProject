@@ -11,7 +11,8 @@ public:
 	enum BarrageKind
 	{
 		KIND_PLAYER,
-		KIND_ENEMY
+		KIND_ENEMY_STRAIGHT,
+		KIND_ENEMY_AIM
 	};
 
 public:
@@ -23,15 +24,19 @@ public:
 	void Draw() const;
 
 	void SetHandle(int handle);
-	void Start(float x, float y, BarrageKind kind);	// 始めるときに位置情報・弾の種類を入れる
+	// 始めるときに位置情報・弾の種類を入れる
+	void Start(float x, float y, BarrageKind kind, const Vec2& pos = Vec2{});
 
 	// プレイヤーとの当たり判定
-	bool Collision(Player player) const;
+	bool Collision(const Player& player) const;
 	// 敵との当たり判定
-	bool Collision(EnemyMove enemy) const;
+	bool Collision(const EnemyMove& enemy) const;
 
 	bool GetIsExist() const { return m_isExist; }
-	BarrageKind GetBarrageKind() const { return m_kinds; }
+
+private:
+	// 画面外にいるかの判定
+	bool OutRangeCheck() const;
 
 private:
 	// グラフィック関連
@@ -42,9 +47,6 @@ private:
 	// 使われているかいないか
 	bool m_isExist;
 
-	// 弾の種類
-	BarrageKind m_kinds;
-
 	// 当たる半径
 	int m_radius;
 
@@ -52,6 +54,6 @@ private:
 	Vec2 m_pos;
 
 	// 移動情報
-	Vec2 m_move;
+	Vec2 m_vec;
 };
 

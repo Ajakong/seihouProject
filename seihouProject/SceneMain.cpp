@@ -5,7 +5,7 @@
 // (1人までなら大丈夫だけど2人以上やったら競合で大変だからね)
 // 使う際は_を消したら使えるようになるよ
 #define _TAKASAKI
-#define _TASHIRO
+#define TASHIRO
 #define _YOSIYAMA
 
 #include <DxLib.h>

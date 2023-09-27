@@ -9,10 +9,11 @@
 
 namespace
 {
-	// デフォルトスピード
-	// 敵用として下に降ってくるのがデフォルトとしている
-	constexpr int kDefaultSpeedX = 0;
-	constexpr int kDefaultSpeedY = 8;
+	// プレイヤーの弾の速度
+	constexpr float kPlayerBarrageSpeed = 4.0f;
+
+	// 敵の弾の速度
+	constexpr float kEnemyBarrageSpeed = 4.0f;
 
 	constexpr int kRadius = 3;
 }
@@ -22,9 +23,7 @@ BaseBarrage::BaseBarrage():
 	m_graphSizeX(0),
 	m_graphSizeY(0),
 	m_isExist(true),
-	m_kinds(KIND_PLAYER),	// プレイヤーとして初期化
-	m_radius(kRadius),
-	m_move{ kDefaultSpeedX, kDefaultSpeedY }
+	m_radius(kRadius)
 {
 }
 
@@ -41,29 +40,10 @@ void BaseBarrage::Update()
 	if (!m_isExist) return;
 
 	// 位置の更新
-	m_pos += m_move;
+	m_pos += m_vec;
 
 	// 範囲外にいったら消す
-	if (m_move.x < 0 &&
-		m_pos.x < 0 - m_graphSizeX)
-	{
-		m_isExist = false;
-	}
-	if (0 < m_move.x &&
-		Game::kScreenWidth + m_graphSizeX < m_pos.x)
-	{
-		m_isExist = false;
-	}
-	if (m_move.y < 0 &&
-		m_pos.y < 0 - m_graphSizeY)
-	{
-		m_isExist = false;
-	}
-	if (0 < m_move.y &&
-		Game::kScreenHeight + m_graphSizeY < m_pos.y)
-	{
-		m_isExist = false;
-	}
+	m_isExist = OutRangeCheck();
 }
 
 void BaseBarrage::Draw() const
@@ -83,32 +63,77 @@ void BaseBarrage::SetHandle(int handle)
 	GetGraphSize(m_handle, &m_graphSizeX, &m_graphSizeY);
 }
 
-void BaseBarrage::Start(float x, float y, BarrageKind kind)
+void BaseBarrage::Start(float x, float y, BarrageKind kind, const Vec2& pos = Vec2{})
 {
 	m_isExist = true;
 
 	m_pos.x = x;
 	m_pos.y = y;
 
-	m_kinds = kind;
+	switch (kind)
+	{
+	case KIND_PLAYER:
+		// todo: まっすぐ上飛ぶ自機弾
+		m_vec = Vec2{ 0.0f, 1.0f } * -kPlayerBarrageSpeed;
+		break;
+	case KIND_ENEMY_STRAIGHT:
+		// まっすぐ上飛ぶ敵弾
+		m_vec = Vec2{ 0.0f, 1.0f } * kEnemyBarrageSpeed;
+		break;
+	case KIND_ENEMY_AIM:
+		// 自機に向かって飛ぶ敵弾
+		m_vec = pos - m_pos;
+		m_vec.Normalize();
+		m_vec *= kEnemyBarrageSpeed;
+		break;
+	default:
+		assert(false);
+		break;
+	};
 }
 
-bool BaseBarrage::Collision(Player player) const
+bool BaseBarrage::Collision(const Player& player) const
 {
-	/*Vec2 dis{ m_pos.x - player.GetPosX(), m_pos.y - player.GetPosY() };
+//	Vec2 dis{ m_pos.x - player.GetPosX(), m_pos.y - player.GetPosY() };
 
-	if((m_radius + player.GetRadius()) * (m_radius + player.GetRadius()) < dis.SqLength())*/
+//	return ((m_radius + player.GetRadius()) * (m_radius + player.GetRadius()) < dis.SqLength());
+
+	// 現状player, enemyの方のGetRadius()ができていないため当たらないと返しておく
 	return false;
 }
 
-bool BaseBarrage::Collision(EnemyMove enemy) const
+bool BaseBarrage::Collision(const EnemyMove& enemy) const
 {
-	// 自身とあたらない位置にいないか
-	if (m_pos.y)	return false;	// 上
-	if (m_pos.y)	return false;	// 下
-	if (m_pos.x)	return false;	// 左
-	if (m_pos.x)	return false;	// 右
+//	Vec2 dis{ m_pos.x - enemy.GetPosX(), m_pos.y - enemy.GetPosY() };
 
-	// 当たっていると返す
+//	return ((m_radius + enemy.GetRadius()) * (m_radius + enemy.GetRadius()) < dis.SqLength());
+
+
+	return false;
+}
+
+bool BaseBarrage::OutRangeCheck() const
+{
+	if (m_vec.x < 0 &&
+		m_pos.x < 0 - m_graphSizeX)
+	{
+		return false;
+	}
+	if (0 < m_vec.x &&
+		Game::kScreenWidth + m_graphSizeX < m_pos.x)
+	{
+		return false;
+	}
+	if (m_vec.y < 0 &&
+		m_pos.y < 0 - m_graphSizeY)
+	{
+		return false;
+	}
+	if (0 < m_vec.y &&
+		Game::kScreenHeight + m_graphSizeY < m_pos.y)
+	{
+		return false;
+	}
+
 	return true;
 }
