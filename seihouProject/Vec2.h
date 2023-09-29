@@ -21,6 +21,14 @@ public:
 	{
 	}
 
+	/// static関数
+	static Vec2 Zero() { return Vec2{ 0.0f, 0.0f }; };
+	static Vec2 One() { return Vec2{ 1.0f, 1.0f }; };
+	static Vec2 Up() { return Vec2{ 0.0f, 1.0f }; };
+	static Vec2 Down() { return Vec2{ 0.0f, -1.0f }; };
+	static Vec2 Right() { return Vec2{ 1.0f, 0.0f }; };
+	static Vec2 Left() { return Vec2{ -1.0f, 0.0f }; };
+
 	/// 単項演算子+
 	Vec2 operator +() const
 	{
@@ -118,4 +126,24 @@ public:
 
 		return Vec2{ x / len, y / len };
 	}
+
+	/// 距離
+	// 左が始点、右が終点
+	static float Distance(const Vec2& v1, const Vec2& v2)
+	{
+		return Vec2{ v2.x - v1.x, v2.y - v1.y }.Length();
+	}
+	// 下の関数に関しては必要になればコメント化解除します
+	/*
+	/// 内積
+	static float Dot(const Vec2& v1, const Vec2& v2)
+	{
+		return v1.x * v2.x + v1.y * v2.y;
+	}
+	/// 角度
+	static float Angle(const Vec2& v1, const Vec2& v2)
+	{
+		return acosf( Dot(v1, v2) / (v1.Length() * v2.Length()) );
+	}
+	*/
 };

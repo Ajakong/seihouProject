@@ -108,7 +108,6 @@ bool BaseBarrage::Collision(const EnemyMove& enemy) const
 
 //	return ((m_radius + enemy.GetRadius()) * (m_radius + enemy.GetRadius()) < dis.SqLength());
 
-
 	return false;
 }
 
