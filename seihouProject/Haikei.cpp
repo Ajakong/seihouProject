@@ -3,6 +3,8 @@
 
 Haikei::Haikei()
 {
+
+
 }
 
 Haikei::~Haikei()

@@ -2,6 +2,8 @@
 #include <DxLib.h>
 #include "Game.h"
 
+#include <cassert>
+
 namespace
 {
 	constexpr float kSpeed = 4.0f;
