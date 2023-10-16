@@ -136,6 +136,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Enemy\EnemyItem.cpp" />
+    <ClCompile Include="Enemy\EnemyMove.cpp" />
     <ClCompile Include="Enemy\EnemyBase.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Other\Bg.cpp" />
@@ -148,6 +150,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Enemy\EnemyItem.h" />
+    <ClInclude Include="Enemy\EnemyMove.h" />
     <ClInclude Include="Enemy\EnemyBase.h" />
     <ClInclude Include="Other\Bg.h" />
     <ClInclude Include="Player\Player.h" />
