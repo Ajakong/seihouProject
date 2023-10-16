@@ -1,1 +1,20 @@
-﻿  heihouProject.vcxproj -> C:\Users\fko2347036\Desktop\tashiro\seihouProject\heihouProject\x64\Debug\heihouProject.exe
+﻿  Application.cpp
+C:\DxLib_VC_3.24b\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  EnemyBase.cpp
+  main.cpp
+C:\DxLib_VC_3.24b\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  Bg.cpp
+  Player.cpp
+  Scene.cpp
+  GameScene.cpp
+C:\DxLib_VC_3.24b\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  SceneManager.cpp
+  ShotBase.cpp
+C:\DxLib_VC_3.24b\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\Users\fko2347036\Desktop\tashiro\seihouProject\heihouProject\Shot\ShotBase.cpp(22,30): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2347036\Desktop\tashiro\seihouProject\heihouProject\Shot\ShotBase.cpp(22,21): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
+  ShotStraight.cpp
+  Pad.cpp
+C:\DxLib_VC_3.24b\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  コードを生成中...
+  heihouProject.vcxproj -> C:\Users\fko2347036\Desktop\tashiro\seihouProject\heihouProject\x64\Debug\heihouProject.exe
