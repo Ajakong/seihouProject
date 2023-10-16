@@ -25,6 +25,30 @@
     <Filter Include="ヘッダー ファイル\Scene">
       <UniqueIdentifier>{5018069d-7929-48cf-aa8e-0c58e6757433}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Shot">
+      <UniqueIdentifier>{ca35e52a-58b2-4e3a-b2a3-ba5b43da926c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Enemy">
+      <UniqueIdentifier>{635cf86c-2292-4dc3-9bc5-18f28f138474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Player">
+      <UniqueIdentifier>{b569512a-5af3-431d-bf64-082f5068d855}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Other">
+      <UniqueIdentifier>{2778c209-c706-47fb-babc-ebc6478a484e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Other">
+      <UniqueIdentifier>{6c94453e-a737-438f-b116-e17eb2878ae4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Shot">
+      <UniqueIdentifier>{5a7da7b2-18bc-4994-9074-f15cc59c4538}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Player">
+      <UniqueIdentifier>{ca370540-f0e9-4648-8736-b86acc5805ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Enemy">
+      <UniqueIdentifier>{99cfdf55-0c25-4225-b068-222fb1ff499e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -45,6 +69,18 @@
     <ClCompile Include="Scene\GameScene.cpp">
       <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy\EnemyBase.cpp">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Shot\ShotBase.cpp">
+      <Filter>ソース ファイル\Shot</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\Player.cpp">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Other\Bg.cpp">
+      <Filter>ソース ファイル\Other</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -64,6 +100,18 @@
     </ClInclude>
     <ClInclude Include="Scene\GameScene.h">
       <Filter>ヘッダー ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy\EnemyBase.h">
+      <Filter>ヘッダー ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Shot\ShotBase.h">
+      <Filter>ヘッダー ファイル\Shot</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\Player.h">
+      <Filter>ヘッダー ファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Other\Bg.h">
+      <Filter>ヘッダー ファイル\Other</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -21,6 +21,13 @@ public:
 	{
 	}
 
+	static Vec2 zero() { return { 0.0f, 0.0f }; };
+	static Vec2 one() { return { 1.0f, 1.0f }; };
+	static Vec2 up() { return { 0.0f, -1.0f }; };
+	static Vec2 down() { return { 0.0f, 1.0f }; };
+	static Vec2 left() { return { -1.0f, 0.0f }; };
+	static Vec2 right() { return { 1.0f, 0.0f }; };
+
 	/// ’P€‰‰Zq+
 	Vec2 operator +() const
 	{
