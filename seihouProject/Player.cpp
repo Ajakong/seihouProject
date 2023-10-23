@@ -3,6 +3,12 @@
 #include"Game.h"
 #include"Vec2.h"
 
+namespace
+{
+	constexpr float kSpeed = 3.0f;
+
+}
+
 Player::Player() :
 	m_handle(0),
 	m_pHp(100),
@@ -26,15 +32,24 @@ void Player::End()
 
 void Player::Update()
 {
+	Vec2 move{ 0.0f,0.0f };
 
 	//padの十字キーを使用してプレイヤーを移動させる
 	int pad = GetJoypadInputState(DX_INPUT_KEY_PAD1);
 
+	
 
-	if (CheckHitKey(KEY_INPUT_W) == 1) m_pos.y -= 3;
-	if (CheckHitKey(KEY_INPUT_S) == 1) m_pos.y += 3;
-	if (CheckHitKey(KEY_INPUT_D) == 1) m_pos.x += 3;
-	if (CheckHitKey(KEY_INPUT_A) == 1) m_pos.x -= 3;
+	if (CheckHitKey(KEY_INPUT_W) == 1) move.y -= kSpeed;
+	if (CheckHitKey(KEY_INPUT_S) == 1) move.y += kSpeed;
+	if (CheckHitKey(KEY_INPUT_D) == 1) move.x += kSpeed;
+	if (CheckHitKey(KEY_INPUT_A) == 1) move.x -= kSpeed;
+
+	//ベクトルの正規化
+	move.Normalize();
+
+	move *= kSpeed;
+
+	m_pos += move;
 
 	if (m_pos.x > Game::kScreenWidth / 2-30)
 	{
@@ -81,7 +96,7 @@ float Player::GetPosY()
 
 
 
-float Player::getradius()
+float Player::GetRadius()
 {
 	return 0.0f;
 }
