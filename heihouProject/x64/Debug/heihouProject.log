@@ -1,26 +1,10 @@
-﻿  Application.cpp
+﻿  EnemyBase.cpp
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  EnemyItem.cpp
-  EnemyMove.cpp
-  EnemyBase.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\Enemy\EnemyBase.cpp(17,12): error C2600: 'EnemyBase::EnemyBase': コンパイラで生成された特殊メンバー関数を定義できません (クラスで最初に宣言されなければなりません)
-C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\Enemy\EnemyBase.cpp(21,13): error C2600: 'EnemyBase::~EnemyBase': コンパイラで生成された特殊メンバー関数を定義できません (クラスで最初に宣言されなければなりません)
-C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\Enemy\EnemyBase.cpp(25,17): error C2039: 'Init': 'EnemyBase' のメンバーではありません
-C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\Enemy\EnemyBase.h(2,7): message : 'EnemyBase' の宣言を確認してください
-C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\Enemy\EnemyBase.cpp(29,17): error C2039: 'Update': 'EnemyBase' のメンバーではありません
-C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\Enemy\EnemyBase.h(2,7): message : 'EnemyBase' の宣言を確認してください
-C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\Enemy\EnemyBase.cpp(33,17): error C2039: 'Draw': 'EnemyBase' のメンバーではありません
-C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\Enemy\EnemyBase.h(2,7): message : 'EnemyBase' の宣言を確認してください
+  EnemyNormal.cpp
   main.cpp
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  Bg.cpp
-  Player.cpp
-  Scene.cpp
-  GameScene.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  SceneManager.cpp
-  ShotBase.cpp
   Pad.cpp
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   コードを生成中...
+  LINK : 前回のインクリメンタル リンクで C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\x64\Debug\heihouProject.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
+  heihouProject.vcxproj -> C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\x64\Debug\heihouProject.exe

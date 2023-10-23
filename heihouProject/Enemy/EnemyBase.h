@@ -12,6 +12,11 @@ public:
 
 	virtual void Start() = 0;
 
+protected:
+	//m_posを左上に,m_handleのグラフィックサイズを幅高さにした
+	//当たり判定を取得する
+	virtual void UpdateCollision();
+
 protected: 
 	int m_handle; //グラフィックのハンドル
 	

@@ -136,6 +136,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Enemy\EnemyLeft.cpp" />
+    <ClCompile Include="Enemy\EnemyRight.cpp" />
+    <ClCompile Include="Enemy\EnemyToPlayer.cpp" />
     <ClCompile Include="Enemy\EnemyBase.cpp" />
     <ClCompile Include="Enemy\EnemyItem.cpp" />
     <ClCompile Include="Enemy\EnemyNormal.cpp" />
@@ -150,6 +153,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Enemy\EnemyLeft.h" />
+    <ClInclude Include="Enemy\EnemyRight.h" />
+    <ClInclude Include="Enemy\EnemyToPlayer.h" />
     <ClInclude Include="Enemy\EnemyBase.h" />
     <ClInclude Include="Enemy\EnemyItem.h" />
     <ClInclude Include="Enemy\EnemyNormal.h" />
