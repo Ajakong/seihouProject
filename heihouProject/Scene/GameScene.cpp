@@ -13,7 +13,7 @@ GameScene::~GameScene()
 }
 
 void GameScene::Update(Pad& input)
-{
+{  
 }
 
 void GameScene::Draw()

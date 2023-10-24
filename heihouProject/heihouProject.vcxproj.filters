@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ヘッダー ファイル\util">
-      <UniqueIdentifier>{003ca6d7-23df-422c-b3ac-c89431423054}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\util">
       <UniqueIdentifier>{00ab0455-584e-4714-a13b-b0ce0f601ac6}</UniqueIdentifier>
     </Filter>
@@ -48,6 +45,9 @@
     </Filter>
     <Filter Include="ヘッダー ファイル\Enemy">
       <UniqueIdentifier>{99cfdf55-0c25-4225-b068-222fb1ff499e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Shot\util">
+      <UniqueIdentifier>{003ca6d7-23df-422c-b3ac-c89431423054}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -87,10 +87,10 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="util\Vec2.h">
-      <Filter>ヘッダー ファイル\util</Filter>
+      <Filter>ヘッダー ファイル\Shot\util</Filter>
     </ClInclude>
     <ClInclude Include="util\Pad.h">
-      <Filter>ヘッダー ファイル\util</Filter>
+      <Filter>ヘッダー ファイル\Shot\util</Filter>
     </ClInclude>
     <ClInclude Include="Scene\Scene.h">
       <Filter>ヘッダー ファイル\Scene</Filter>
