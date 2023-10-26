@@ -1,1 +1,2 @@
 C:\Users\fko2347036\Desktop\tashiro\seihouProject\heihouProject\x64\Debug\heihouProject.exe
+C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\x64\Debug\heihouProject.exe

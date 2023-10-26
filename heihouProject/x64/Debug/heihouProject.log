@@ -1,1 +1,10 @@
-﻿  heihouProject.vcxproj -> C:\Users\fko2347036\Desktop\tashiro\seihouProject\heihouProject\x64\Debug\heihouProject.exe
+﻿  EnemyBase.cpp
+C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  EnemyNormal.cpp
+  main.cpp
+C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  Pad.cpp
+C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  コードを生成中...
+  LINK : 前回のインクリメンタル リンクで C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\x64\Debug\heihouProject.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
+  heihouProject.vcxproj -> C:\Users\fko2347002\Desktop\SampleGame230831\seihouProject\heihouProject\x64\Debug\heihouProject.exe
