@@ -4,6 +4,12 @@
 namespace
 {
 	constexpr float kSpeed = 4.0f;
+
+	constexpr float kGraphWidth = 32;
+	constexpr float kGraphHeight = 64;
+
+	constexpr float kGraphHalfWidth = kGraphWidth / 2.0f;
+	constexpr float kGraphHalfHeight = kGraphHeight / 2.0f;
 }
 
 EnemyLeft::EnemyLeft() : EnemyBase() //明示的に呼ぶ場合の例
@@ -38,5 +44,12 @@ void EnemyLeft::Update()
 
 void EnemyLeft::Start()
 {
-	
+	//画面中央の敵キャラクターを登場させる
+	m_isExist = true;
+
+	m_pos.x = static_cast<float>(0 - kGraphHalfWidth);
+//	m_pos.y = static_cast<float>(GetRand(Game::kScreenHeight - kGraphHeight) + kGraphHeight);
+
+	m_vec.x = kSpeed;
+	m_vec.y = 0.0f;
 }
