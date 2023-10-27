@@ -4,11 +4,11 @@ class BaseBarrage
 {
 public:
 	BaseBarrage();
-	~BaseBarrage();
+	virtual ~BaseBarrage();
 
 	void Init();
-	void Update();
-	void Draw() const;
+	virtual void Update();
+	virtual void Draw() const;
 
 	void SetHandle(int handle);
 	void SetPos(int x, int y);

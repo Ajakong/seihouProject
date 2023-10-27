@@ -3,12 +3,12 @@
 class ShotStraight : public ShotBase
 {
 public:
-	ShotStraight();
+	ShotStraight(Player* pPlayer, ShotType type);
 	virtual ~ShotStraight();
 
 	virtual void Update() override;
 
-	virtual void Start(EnemyBase* pEnemy, Player* pPlayer = nullptr) override;
-	virtual void Start(Player* pPlayer, EnemyBase* pEnemy = nullptr) override;
+	virtual void Start() override;
+	virtual void Start(Vec2 pos) override;
 };
 

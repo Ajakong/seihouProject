@@ -6,7 +6,8 @@ namespace
 	constexpr float kShotSpeed = 8.0f;
 }
 
-ShotToTarget::ShotToTarget()
+ShotToTarget::ShotToTarget(Player* pPlayer, ShotType type) :
+	ShotBase(pPlayer, type)
 {
 }
 
@@ -49,28 +50,25 @@ void ShotToTarget::Update()
 	}
 }
 
-void ShotToTarget::Start(EnemyBase* pEnemy, Player* pPlayer)
+void ShotToTarget::Start(Vec2 pos)
 {
 	m_isUse = true;
 
-	// そのキャラの中心地に出現させる
-	// m_pos = pEnemy->GetPos();
+	// プレイヤー中心のスタート
+	if (m_type == SHOT_TYPE_ENEMY)
+	{
+		m_pos = m_pPlayer->GetPos();
 
-	m_vec = Vec2::one();
-//	m_vec = pPlayer->GetPos() - pEnemy->GetPos();
-	m_vec.Normalize();
-	m_vec *= kShotSpeed;
-}
+		m_vec = pos - m_pos;
+	}
+	// 敵中心のスタート
+	else
+	{
+		m_pos = pos;
 
-void ShotToTarget::Start(Player* pPlayer, EnemyBase* pEnemy)
-{
-	m_isUse = true;
+		m_vec = m_pPlayer->GetPos() - pos;
+	}
 
-	// そのキャラの中心地に出現させる
-	// m_pos = pPlayer->GetPos();
-
-	m_vec = Vec2::one();
-//	m_vec = pEnemy->GetPos() - pPlayer->GetPos();
 	m_vec.Normalize();
 	m_vec *= kShotSpeed;
 }

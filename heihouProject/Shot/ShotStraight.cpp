@@ -8,7 +8,8 @@ namespace
 	constexpr float kShotSpeed = 8.0f;
 }
 
-ShotStraight::ShotStraight()
+ShotStraight::ShotStraight(Player* pPlayer, ShotType type) :
+	ShotBase(pPlayer, type)
 {
 }
 
@@ -38,24 +39,28 @@ void ShotStraight::Update()
 	}
 }
 
-void ShotStraight::Start(EnemyBase* pEnemy, Player* pPlayer = nullptr)
+void ShotStraight::Start()
 {
 	m_isUse = true;
 
 	// そのキャラの中心地に出現させる
-	// m_pos = pEnemy->GetPos();
+	//m_pos = m_pPlayer.GetPos();
 
-	m_vec.x = kShotSpeed;
+	// 下から上へ飛ばす
+	m_vec.x = -kShotSpeed;
+
 	m_vec.y = 0.0f;
 }
 
-void ShotStraight::Start(Player* pPlayer, EnemyBase* pEnemy = nullptr)
+void ShotStraight::Start(Vec2 pos)
 {
 	m_isUse = true;
 
 	// そのキャラの中心地に出現させる
-	// m_pos = pPlayer->GetPos();
+	// m_pos = pos;
 
-	m_vec.x = -kShotSpeed;
+	// 上から下へ飛ばす
+	m_vec.x = kShotSpeed;
+
 	m_vec.y = 0.0f;
 }

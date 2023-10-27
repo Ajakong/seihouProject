@@ -1,11 +1,16 @@
 #include <DxLib.h>
 #include <cassert>
+
 #include "ShotBase.h"
 
-ShotBase::ShotBase() :
+#include "Player/Player.h"
+
+ShotBase::ShotBase(Player* pPlayer, ShotType type) :
 	m_handle(-1),
 	m_graphWidth(0),
 	m_graphHeight(0),
+	m_pPlayer(pPlayer),
+	m_type(type),
 	m_isUse(false)
 {
 }
